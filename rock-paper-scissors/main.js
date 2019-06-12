@@ -17,7 +17,6 @@ function init() {
 }
 
 
-
 // Your Turn
 
 function humanPlay(humanTurn) {
@@ -39,12 +38,11 @@ function humanPlay(humanTurn) {
 
     // Check for Winner after human turn.
     checkWinner();
-
 }
 
 
 
-// Computer Turn. 
+// Computer Turn
 // Used Math.random() to randomize computer choices from switch statement.
 // Math.random() * (max - min) + min; This formula gets a random number between 2 values. 
 
@@ -69,7 +67,7 @@ function computerPlay() {
 // Winning Conditions
 
 function checkWinner() {
-    //Condition for Rock
+    // Condition for Rock
     if (game.player === "Rock") {
         if (game.computer === "Rock") {
             renderDraw();
@@ -128,19 +126,20 @@ function checkWinner() {
 
 //Rendering Functions
 
+// Result messages and human/cpu play
 function renderWin() {
     renderResults();
-    document.getElementById("result-text").innerHTML = "Win";
+    document.getElementById("result-text").innerHTML = "You Win";
 }
 
 function renderLose() {
     renderResults();
-    document.getElementById("result-text").innerHTML = "Lose";
+    document.getElementById("result-text").innerHTML = " You Lose";
 }
 
 function renderDraw() {
     renderResults();
-    document.getElementById("result-text").innerHTML = "Draw";
+    document.getElementById("result-text").innerHTML = "Draw! Try again!";
 }
 
 function renderResults (){
